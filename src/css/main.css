@@ -31,7 +31,8 @@ h2 {
   /*background-color: #933; color: #fee !important;*/
   background-color: #622; color: #fee !important;
   font-size: 1.25rem; font-weight: 600;
-  border: solid 1px #fee; border-bottom: 0; 
+  /*border: solid 1px #fee; border-bottom: 0; */
+  border: 0; border-top: solid 1px #fee;
   transition: 0.25s;
 }
 
