@@ -1,0 +1,30 @@
+html {
+  font-size: 100%;
+}
+
+
+body {
+  margin: 0;
+  background-color: #fff; color: #111;
+  font-family: Source Sans Pro; font-weight: 400; font-size: 1rem;
+}
+
+
+h2 {
+  font-family: Source Sans Pro; font-weight: 600;
+  font-size: 1rem;
+  line-height: auto;
+
+}
+
+
+.row {}
+
+.accordion-title {
+  font-size: 1rem; font-weight: 600;
+  color: inherit !important;
+}
+
+.accordion-title:hover {
+  color: inherit;
+}
