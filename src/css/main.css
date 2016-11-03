@@ -10,21 +10,33 @@ body {
 }
 
 
-h2 {
+h1, h2 {
   font-family: Source Sans Pro; font-weight: 600;
-  font-size: 1rem;
   line-height: auto;
+}
 
+h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 1rem;
 }
 
 
 .row {}
 
-.accordion-title {
-  font-size: 1rem; font-weight: 600;
-  color: inherit !important;
+.accordion-title, .accordion-title:link {
+  padding: 16px 16px;
+  background-color: #369; color: #9cf !important;
+  font-size: 1.25rem; font-weight: 600;
+  /*color: inherit !important;*/
+  transition: 0.25s;
+
 }
 
-.accordion-title:hover {
-  color: inherit;
+
+.accordion-title:hover, .accordion-title:visited {
+  /*color: inherit;*/
+  background-color: #47a;
 }
