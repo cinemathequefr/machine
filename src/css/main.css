@@ -28,7 +28,8 @@ h2 {
 
 .accordion-title, .accordion-title:link {
   padding: 16px 16px;
-  background-color: #369; color: #9cf !important;
+  /*background-color: #369; color: #9cf !important;*/
+  background-color: #933; color: #fee !important;
   font-size: 1.25rem; font-weight: 600;
   /*color: inherit !important;*/
   transition: 0.25s;
@@ -38,5 +39,5 @@ h2 {
 
 .accordion-title:hover, .accordion-title:visited {
   /*color: inherit;*/
-  background-color: #47a;
+  background-color: #711;
 }
