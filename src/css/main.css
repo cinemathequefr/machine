@@ -5,7 +5,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #fff; color: #111;
+  background-color: #b55; color: #fee;
   font-family: Source Sans Pro; font-weight: 400; font-size: 1rem;
 }
 
@@ -28,16 +28,17 @@ h2 {
 
 .accordion-title, .accordion-title:link {
   padding: 16px 16px;
-  /*background-color: #369; color: #9cf !important;*/
   background-color: #933; color: #fee !important;
   font-size: 1.25rem; font-weight: 600;
-  /*color: inherit !important;*/
+  border: solid 1px #fee; border-bottom: 0; 
   transition: 0.25s;
-
 }
-
 
 .accordion-title:hover, .accordion-title:visited {
   /*color: inherit;*/
   background-color: #711;
+}
+
+.accordion-content {
+  background-color: #fefefe;
 }
