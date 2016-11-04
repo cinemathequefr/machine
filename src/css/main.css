@@ -44,3 +44,8 @@ h2 {
 .accordion-content {
   background-color: #fefefe;
 }
+
+.accordion-content img {
+  display: block;
+  margin: 24px auto;
+}
