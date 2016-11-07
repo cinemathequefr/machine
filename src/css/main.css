@@ -28,12 +28,11 @@ h2 {
 
 .accordion-title, .accordion-title:link {
   padding: 16px 16px;
-  /*background-color: #933; color: #fee !important;*/
-  background-color: #622; color: #fee !important;
+  /*background-color: #622; color: #fee !important;*/
+  background-color: #999; color: #eee !important;
   font-size: 1.25rem; font-weight: 600;
-  /*border: solid 1px #fee; border-bottom: 0; */
   border: 0; border-top: solid 1px #fee;
-  transition: 0.25s;
+  transition: 0.15s;
 }
 
 .accordion-title:hover, .accordion-title:visited {
@@ -42,10 +41,10 @@ h2 {
 }
 
 .accordion-content {
-  background-color: #fefefe;
+  background-color: #eee;
 }
 
 .accordion-content img {
-  display: block;
+  display: block; width: 100%;
   margin: 24px auto;
 }
