@@ -16,19 +16,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/plugins/foundation.accordion.js"></script>
     <script>
     $(function () {
-      $(document).foundation();
-
-
-
+      var $active;
+      $(".accordion").on("click", ".accordion-title", function () {
+        var itemIndexNew = $(".accordion-item").index($(this).parent());
+        var itemIndexOld = ($active ? $(".accordion-item").index($active) : null);
+        if (itemIndexOld !== null && itemIndexOld < itemIndexNew) {
+          console.log("Hzey");
+          $("html, body").scrollTop($(window).scrollTop() - $active.height());
+        }
+      });
       $(".accordion").on("down.zf.accordion", function(e) {
-        window.setTimeout(function () {
-          var y = $(e.target).find(".is-active").offset().top;
-          $("html, body").animate({ scrollTop: y }, 125);
-        }, 260);
+        $active = $(".accordion").find(".accordion-item.is-active");
       });
 
-
-
+      $(document).foundation();
 
     });
     </script>
@@ -37,6 +38,7 @@
   <body>
     <div class="row">
       <h1>De Méliès à la 3D : La machine cinéma - Guide de l'exposition</h1>
+      <!-- <ul class="accordion" data-accordion data-allow-all-closed="true" data-accordion data-multi-expand="true"> -->
       <ul class="accordion" data-accordion data-allow-all-closed="true">
         <li class="accordion-item" data-accordion-item>
           <a href="#" class="accordion-title">Section 1&nbsp;: Naissance du cinéma</a>
@@ -119,7 +121,7 @@
             <p>Inventé par le professeur Chrétien en 1927, ce procédé consiste à anamorphoser les images à la prise de vue, en les compressant, pour les redresser ensuite lors de la projection grâce à un système optique. En France, Claude Autant-Lara réalise un film avec l'Hypergonar&nbsp;: <em>Construire un feu</em>, d'après le roman de Jack London, avec images en hauteur et en largeur. Mais lorsque le film sort en 1929, le cinéma est devenu parlant, et c'est un échec.</p>
             <h2>Le CinémaScope</h2>
             <p>La Fox rachète et développe le procédé de Chrétien en 1953. Le CinémaScope permet de projeter des images très larges (au ratio 2,35:1). Par rapport aux formats «&nbsp;carrés&nbsp;» (1,33:1, puis 1,37:1), l'ampleur de l'image prend tout son sens dans les décors de westerns et de péplums alors très en vogue. Le premier film du genre est <em>La Tunique</em>, d'Henry Koster, qui sort dès 1953. Le nouveau format, rapidement adopté par la majorité des réalisateurs, change radicalement la donne en termes de mise en scène, de cadrage, de direction d'acteurs, de montage même.</p>
-            <p>Pour l'anecdote,&nbsp;: le format du CinémaScope est fixé en projection à 2,35:1, après avoir oscillé entre 2,55:1 et 2,66:1. Certains opérateurs ou cinéastes restent réticents, comme Fritz Lang, qui déclarera&nbsp;: «&nbsp;Le CinémaScope n'est pas un format fait pour filmer les hommes, mais les serpents et les enterrements.&nbsp;»</p>
+            <p>Pour l'anecdote, le format du CinémaScope est fixé en projection à 2,35:1, après avoir oscillé entre 2,55:1 et 2,66:1. Certains opérateurs ou cinéastes restent réticents, comme Fritz Lang, qui déclarera&nbsp;: «&nbsp;Le CinémaScope n'est pas un format fait pour filmer les hommes, mais les serpents et les enterrements.&nbsp;»</p>
             <h2>Le projecteur Todd-AO 70&nbsp;mm</h2>
             <p>Inventé en 1955, le procédé Todd-AO 70&nbsp;mm donne des résultats spectaculaires dès la première réalisation qui en fait usage&nbsp;: <em>Oklahoma!</em>, de Fred Zinnemann, présenté le 13 octobre 1955 à New York.</p>
             <div class="row small-up-1 large-up-2"><img class="column" src="img/860/todd-ao-film.jpg"></div>
