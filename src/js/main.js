@@ -1,5 +1,10 @@
-(function () {
+$(function () {
+
   "use strict";
+
+  var $loadbar = $(".loadbar");
+
+
 
   var queue = new createjs.LoadQueue(true); // http://www.createjs.com/Docs/PreloadJS/classes/LoadQueue.html
   var imgs = [
@@ -34,32 +39,34 @@
 
   function preloadProgress (e) {
     console.log(e.progress * 100);
+    $loadbar.css({ width: (e.progress * 100) + "%" });
+    // $(".loadbar").css({ width: (e.progress * 100) + "%" });
   }
 
   function preloadComplete () {
-    $(function () {
-      var $active;
-      $(".accordion").on("click", ".accordion-title", function () {
-        var itemIndexNew = $(".accordion-item").index($(this).parent());
-        var itemIndexOld = ($active ? $(".accordion-item").index($active) : null);
-        if (itemIndexOld !== null && itemIndexOld < itemIndexNew) {
-          console.log("Hzey");
-          $("html, body").scrollTop($(window).scrollTop() - $active.height());
-        }
-      });
-      $(".accordion").on("down.zf.accordion", function(e) {
-        $active = $(".accordion").find(".accordion-item.is-active");
-      });
-
-      $(document).foundation();
-      $(".row").fadeIn(10);
+    var $active;
+    $(".accordion").on("click", ".accordion-title", function () {
+      var itemIndexNew = $(".accordion-item").index($(this).parent());
+      var itemIndexOld = ($active ? $(".accordion-item").index($active) : null);
+      if (itemIndexOld !== null && itemIndexOld < itemIndexNew) {
+        console.log("Hzey");
+        $("html, body").scrollTop($(window).scrollTop() - $active.height());
+      }
     });
+    $(".accordion").on("down.zf.accordion", function(e) {
+      $active = $(".accordion").find(".accordion-item.is-active");
+    });
+
+    $(".content").fadeIn(10);
   }
 
+
   // Init
+  $(document).foundation();
   queue.setMaxConnections(10);
   queue.loadManifest(imgs);
   queue.on("progress", preloadProgress);
   queue.on("complete", preloadComplete);
 
-})();
+
+});
