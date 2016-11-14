@@ -18,12 +18,12 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
 }
 
 h1.small, h1 .small {
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 
