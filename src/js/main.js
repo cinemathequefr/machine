@@ -2,9 +2,9 @@ $(function () {
 
   "use strict";
 
+  var $loadcontainer = $(".loadcontainer");
   var $loadbar = $(".loadbar");
-
-
+  var $content = $(".content");
 
   var queue = new createjs.LoadQueue(true); // http://www.createjs.com/Docs/PreloadJS/classes/LoadQueue.html
   var imgs = [
@@ -40,7 +40,6 @@ $(function () {
   function preloadProgress (e) {
     console.log(e.progress * 100);
     $loadbar.css({ width: (e.progress * 100) + "%" });
-    // $(".loadbar").css({ width: (e.progress * 100) + "%" });
   }
 
   function preloadComplete () {
@@ -57,7 +56,8 @@ $(function () {
       $active = $(".accordion").find(".accordion-item.is-active");
     });
 
-    $(".content").fadeIn(10);
+    $loadcontainer.fadeOut(10);
+    $content.fadeIn(10);
   }
 
 

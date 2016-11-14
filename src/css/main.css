@@ -33,7 +33,7 @@ h2 {
 
 .splash {
   display: block;
-  height: 100vh;
+  /*height: 100vh;*/
 }
 
 .loadcontainer {
