@@ -14,25 +14,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/plugins/foundation.util.keyboard.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/plugins/foundation.util.motion.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/plugins/foundation.accordion.js"></script>
-    <script>
-    $(function () {
-      var $active;
-      $(".accordion").on("click", ".accordion-title", function () {
-        var itemIndexNew = $(".accordion-item").index($(this).parent());
-        var itemIndexOld = ($active ? $(".accordion-item").index($active) : null);
-        if (itemIndexOld !== null && itemIndexOld < itemIndexNew) {
-          console.log("Hzey");
-          $("html, body").scrollTop($(window).scrollTop() - $active.height());
-        }
-      });
-      $(".accordion").on("down.zf.accordion", function(e) {
-        $active = $(".accordion").find(".accordion-item.is-active");
-      });
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PreloadJS/0.6.0/preloadjs.min.js"></script>
+    <script src="src/js/main.js"></script>
 
-      $(document).foundation();
-
-    });
-    </script>
     <title>De Méliès à la 3D : La Machine cinéma - Guide de l'exposition - La Cinémathèque française</title>
   </head>
   <body>
