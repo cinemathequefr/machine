@@ -38,7 +38,6 @@ $(function () {
   ];
 
   function preloadProgress (e) {
-    console.log(e.progress * 100);
     $loadbar.css({ width: (e.progress * 100) + "%" });
   }
 
@@ -48,7 +47,6 @@ $(function () {
       var itemIndexNew = $(".accordion-item").index($(this).parent());
       var itemIndexOld = ($active ? $(".accordion-item").index($active) : null);
       if (itemIndexOld !== null && itemIndexOld < itemIndexNew) {
-        console.log("Hzey");
         $("html, body").scrollTop($(window).scrollTop() - $active.height());
       }
     });
@@ -56,8 +54,11 @@ $(function () {
       $active = $(".accordion").find(".accordion-item.is-active");
     });
 
-    $loadcontainer.fadeOut(10);
-    $content.fadeIn(10);
+    window.setTimeout(function () {
+      $loadcontainer.fadeOut(100);
+      $content.fadeIn(100);      
+    }, 500);
+
   }
 
 
