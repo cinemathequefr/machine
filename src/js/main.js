@@ -1,15 +1,8 @@
 $(function () {
-
   "use strict";
-
   var $loadcontainer = $(".loadcontainer");
   var $loadbar = $(".loadbar");
-
-  console.log($loadbar, $loadcontainer);
-
-
   var $content = $(".content");
-
   var queue = new createjs.LoadQueue(true); // http://www.createjs.com/Docs/PreloadJS/classes/LoadQueue.html
   var imgs = [
     "img/860/kinetoscope.jpg",
@@ -59,13 +52,9 @@ $(function () {
     });
 
     window.setTimeout(function () {
-      // $loadcontainer.fadeOut(100);
-      // $content.fadeIn(100);
       $loadcontainer.slideUp(100);
     }, 500);
-
   }
-
 
   // Init
   $(document).foundation();
@@ -73,6 +62,4 @@ $(function () {
   queue.loadManifest(imgs);
   queue.on("progress", preloadProgress);
   queue.on("complete", preloadComplete);
-
-
 });
