@@ -4,6 +4,10 @@ $(function () {
 
   var $loadcontainer = $(".loadcontainer");
   var $loadbar = $(".loadbar");
+
+  console.log($loadbar, $loadcontainer);
+
+
   var $content = $(".content");
 
   var queue = new createjs.LoadQueue(true); // http://www.createjs.com/Docs/PreloadJS/classes/LoadQueue.html
@@ -55,8 +59,9 @@ $(function () {
     });
 
     window.setTimeout(function () {
-      $loadcontainer.fadeOut(100);
-      $content.fadeIn(100);      
+      // $loadcontainer.fadeOut(100);
+      // $content.fadeIn(100);
+      $loadcontainer.slideUp(100);
     }, 500);
 
   }

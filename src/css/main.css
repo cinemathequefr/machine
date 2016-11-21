@@ -33,12 +33,12 @@ h2 {
 
 .splash {
   display: block;
-  height: 100vh;
+  height: 50vh;
 }
 
 .title {
   display: block;
-  width: 60%; /*height: 50vh;*/ margin: 48px 20%;
+  height: 25vh; margin: 12.5vh auto;
 }
 
 .title path {
@@ -48,7 +48,7 @@ h2 {
 .loadcontainer {
   position: relative; overflow: hidden;
   height: 16px; width: 80%;
-  margin: 48px auto; border: solid 1px #fff; padding: 2px;
+  margin: 10vh auto 40vh auto; border: solid 1px #fff; padding: 2px;
   box-sizing: border-box;
 }
 
@@ -60,7 +60,7 @@ h2 {
 }
 
 .content {
-  display: none;
+  /*display: none;*/
 }
 
 .accordion-title, .accordion-title:link, .accordion-title:visited {
