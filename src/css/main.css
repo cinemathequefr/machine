@@ -5,7 +5,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #100; color: #fee;
+  background-color: #311; color: #fee;
   font-family: Source Sans Pro; font-weight: 400; font-size: 1rem;
   scroll-
 }
@@ -36,9 +36,7 @@ h2 {
 
 .title {
   display: block;
-  /*height: 25vh; margin: 12.5vh auto;*/
-  width: 50%; max-height: 40vh; margin: 5vh auto;
-
+  width: 75%; max-height: 40vh; margin: 5vh auto;
 }
 
 .title path {
